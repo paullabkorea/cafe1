@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개 | 오피스 제주</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            height: 50vh;
+            min-height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 50, 80, 0.4);
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+
+        .page-hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .page-hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .about-detail {
+            padding: 100px 0;
+        }
+
+        .about-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-story:nth-child(even) {
+            direction: rtl;
+        }
+
+        .about-story:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .story-image {
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .story-text h3 {
+            font-size: 2rem;
+            color: #2c5f2d;
+            margin-bottom: 20px;
+        }
+
+        .story-text p {
+            color: #666;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .values-section {
+            background: #f9f9f9;
+            padding: 100px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: #fff;
+            padding: 50px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+        }
+
+        .value-card h4 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .team-section {
+            padding: 100px 0;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .team-intro p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-story:nth-child(even) {
+                direction: ltr;
+            }
+
+            .story-image {
+                height: 250px;
+            }
+
+            .about-detail {
+                padding: 60px 0;
+            }
+
+            .values-section {
+                padding: 60px 0;
+            }
+
+            .team-section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">오피스 제주</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="./index.html" class="active">소개</a></li>
+                <li><a href="../index.html#menu">메뉴</a></li>
+                <li><a href="../index.html#gallery">갤러리</a></li>
+                <li><a href="../location/index.html">위치</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 페이지 히어로 -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1>About Us</h1>
+            <p>오피스 제주의 이야기를 소개합니다</p>
+        </div>
+    </section>
+
+    <!-- 상세 소개 -->
+    <section class="about-detail">
+        <div class="container">
+            <div class="about-story">
+                <div class="story-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    우리의 시작
+                </div>
+                <div class="story-text">
+                    <h3>제주에서 시작된 이야기</h3>
+                    <p>오피스 제주는 2020년, 제주도의 아름다운 사계리에서 작은 꿈으로 시작되었습니다.</p>
+                    <p>도시의 바쁜 일상에서 벗어나 자연 속에서 진정한 휴식을 찾고자 하는 분들을 위해,
+                    우리는 이 특별한 공간을 만들었습니다.</p>
+                    <p>산방산의 웅장함과 사계 바다의 평온함이 만나는 이곳에서,
+                    한 잔의 커피가 주는 여유로움을 경험해 보세요.</p>
+                </div>
+            </div>
+
+            <div class="about-story">
+                <div class="story-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    우리의 공간
+                </div>
+                <div class="story-text">
+                    <h3>자연을 담은 공간</h3>
+                    <p>넓은 통유리창을 통해 들어오는 제주의 빛과 바람은
+                    이곳만의 특별한 분위기를 만들어냅니다.</p>
+                    <p>미니멀하면서도 따뜻한 인테리어는 자연과 조화를 이루며,
+                    방문하시는 모든 분들에게 편안한 휴식을 제공합니다.</p>
+                    <p>테라스에서 바라보는 산방산의 일몰은 오피스 제주에서만
+                    경험할 수 있는 특별한 선물입니다.</p>
+                </div>
+            </div>
+
+            <div class="about-story">
+                <div class="story-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    우리의 커피
+                </div>
+                <div class="story-text">
+                    <h3>정성을 담은 한 잔</h3>
+                    <p>오피스 제주의 커피는 엄선된 스페셜티 원두만을 사용합니다.
+                    매일 아침 신선하게 로스팅된 원두로 최상의 맛을 추구합니다.</p>
+                    <p>바리스타가 직접 내린 커피 한 잔에는 제주의 자연과
+                    우리의 철학이 담겨 있습니다.</p>
+                    <p>제주 특산물을 활용한 시그니처 음료와 수제 디저트도
+                    함께 즐겨보세요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 가치 섹션 -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌿</div>
+                    <h4>자연과 함께</h4>
+                    <p>제주의 자연을 존중하며, 친환경적인 운영을 추구합니다.
+                    일회용품 사용을 줄이고 지역 농가와 함께합니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">☕</div>
+                    <h4>품질에 대한 고집</h4>
+                    <p>최고의 원두, 최상의 재료만을 사용합니다.
+                    한 잔의 커피에도 타협하지 않는 정성을 담습니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💝</div>
+                    <h4>따뜻한 환대</h4>
+                    <p>모든 손님을 가족처럼 맞이합니다.
+                    진심 어린 서비스로 특별한 경험을 선사합니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🏝️</div>
+                    <h4>제주 로컬</h4>
+                    <p>제주의 맛과 문화를 담습니다.
+                    지역 사회와 함께 성장하는 카페를 지향합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 팀 섹션 -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-intro">
+                <p>오피스 제주는 커피를 사랑하고 제주를 사랑하는 사람들이 모여 만든 공간입니다.
+                저희 팀원 모두가 한 마음으로 여러분의 방문을 기다리고 있습니다.</p>
+                <p style="margin-top: 20px;">제주에서의 특별한 하루, 오피스 제주와 함께하세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>오피스 제주</h3>
+                    <p>제주 사계의 감성 카페</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Blog</a>
+                    <a href="#">KakaoMap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 오피스 제주. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
